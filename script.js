@@ -1,19 +1,29 @@
 let submitbtn = document.getElementById("sub-btn");
 let copybtn = document.getElementById("copy-btn");
 submitbtn.addEventListener("click", collect);
+
 async function collect() {
   const longUrl = document.getElementById("longurl").value;
-  console.log(longUrl);
+
+  const valid = isValidHttpUrl(longUrl);
+
+  function isValidHttpUrl(string) {
+    try {
+      const newUrl = new URL(string);
+      return newUrl.protocol === "http:" || newUrl.protocol === "https:";
+    } catch (err) {
+      return false;
+    }
+  }
+
   let content = document.getElementsByClassName("content");
   const apiURL = `https://tinyurl.com/api-create.php?url=${encodeURIComponent(
     longUrl
   )}`;
-  console.log(!longUrl == "");
-  if (!longUrl == "") {
+  if (valid) {
     await fetch(apiURL)
       .then((res) => res.text())
       .then((tiny) => {
-        console.log(tiny);
         content[0].value = tiny;
       })
       .catch((error) => {
@@ -21,7 +31,7 @@ async function collect() {
         alert("An error occurred while shortening URL");
       });
   } else {
-    alert("Please enter a URL.");
+    alert("Please Enter Valid URL....");
     return;
   }
 }
