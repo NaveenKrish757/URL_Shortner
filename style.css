@@ -1,0 +1,117 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 550px;
+  width: 600px;
+  background-color: rgb(43, 42, 42);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#heading {
+  text-align: center;
+  font-size: 3rem;
+  color: rgb(6, 117, 244);
+  text-shadow: 3px 3px 10px rgb(0, 0, 0);
+}
+
+.para {
+  text-align: center;
+  color: rgb(250, 248, 248);
+  font-size: x-large;
+  padding: 45px;
+}
+#url {
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.input-text {
+  height: 45px;
+  color: chocolate;
+  font-size: 1rem;
+  padding-left: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(4, 4, 4);
+}
+
+.submit {
+  height: 45px;
+  width: 90px;
+  border: none;
+  border-radius: 13px;
+  background-color: rgb(35, 128, 35);
+}
+
+.result {
+  padding: 25px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.content {
+  display: inline-block;
+  width: 225px;
+  height: 46px;
+  color: chocolate;
+  font-size: 1rem;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: rgb(4, 4, 4);
+  overflow: hidden;
+}
+.copy-btn {
+  height: 45px;
+  width: 90px;
+  border: none;
+  border-radius: 13px;
+  background-color: rgb(35, 128, 35);
+}
+.container:hover {
+  /* border-left: solid rgb(0, 0, 0); */
+  border-top: solid rgb(14, 118, 236);
+  box-shadow: 5px 5px 6px rgb(14, 118, 236);
+}
+
+h1:hover {
+  color: rgb(250, 85, 8);
+  text-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+.submit:hover {
+  background-color: #45ec5e;
+}
+.copy-btn:hover {
+  background-color: #45ec5e;
+}
+input[class="input-text"]:focus {
+  outline: dotted rgb(239, 76, 169);
+}
+
+input::placeholder {
+  color: red;
+}
+
+input:hover::placeholder {
+  color: blue;
+}

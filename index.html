@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style Sheet linked Here -->
+    <link rel="stylesheet" href="./style.css" />
+    <title>URL_SHORTNER🔍</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="heading">
+        <h1>Short URL</h1>
+      </div>
+      <div>
+        <p class="para">
+          ShortURL is a free tool to shorten URLs and generate short links URL
+          shortener allows to create a shortened link making it easy to share.
+        </p>
+      </div>
+      <div id="url">
+        <input
+          type="text"
+          id="longurl"
+          name="url"
+          placeholder="Enter The URL Here"
+          required
+          class="input-text"
+          title="paste the link here"
+          autocomplete="off"
+        />
+        <button id="sub-btn" class="submit">Shorten URL</button>
+      </div>
+      <!-- /result here -->
+      <div class="result">
+        <textarea class="content" cols="30" rows="10" readonly></textarea>
+        <div>
+          <button id="copy-btn" class="copy-btn">Copy URL</button>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
